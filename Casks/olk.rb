@@ -2,14 +2,25 @@
 cask "olk" do
   version "0.4.3"
 
+  on_macos do
+    on_intel do
+      url "https://github.com/rlrghb/olkcli/releases/download/v#{version}/olk_#{version}_darwin_amd64.tar.gz"
+      sha256 "3f43aefb90ee8bb273c6d9ee73ae2f4e1f50fdae539878a3c52e0bcb9ab4ec14"
+    end
+    on_arm do
+      url "https://github.com/rlrghb/olkcli/releases/download/v#{version}/olk_#{version}_darwin_arm64.tar.gz"
+      sha256 "fa364fa50d74bb7b23f4c43307034459923e6ce0075d9a689badf0ad306f2dcb"
+    end
+  end
+
   on_linux do
     on_intel do
       url "https://github.com/rlrghb/olkcli/releases/download/v#{version}/olk_#{version}_linux_amd64.tar.gz"
-      sha256 "2341c3beaaa3dd062a89509a0dce89d84b0934ba9232dc9c326a29fed5bbb79c"
+      sha256 "2e1b5a878982f7d19d7e3becaf89ecee5cf091a952ca474842cb1ce44236e27b"
     end
     on_arm do
       url "https://github.com/rlrghb/olkcli/releases/download/v#{version}/olk_#{version}_linux_arm64.tar.gz"
-      sha256 "7a4fe003bf6ddbd332e7540f47697d2a663476c0c6d15ca05331c6d12f52afd2"
+      sha256 "09ee8e0b8a4d7657aec6067ba950378e2e5f92435bbc7107af5fab3bd5de3bcf"
     end
   end
 
